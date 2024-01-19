@@ -9,10 +9,16 @@
   </head>
   <body>
     <div class="grid-container"></div>
+    <button>Set Grid Dimensions</button>
     <script>
       const grid = document.querySelector(".grid-container");
-      const gridSize = 16;
-      createGrid(gridSize);
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        removeGrid();
+        const gridSize = setGridSize();
+        createGrid(gridSize);
+      });
 
       function setGridSize() {
         while (true) {
