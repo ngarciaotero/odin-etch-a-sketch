@@ -14,6 +14,17 @@
       const gridSize = 16;
       createGrid(gridSize);
 
+      function setGridSize() {
+        while (true) {
+          const size = +prompt("Enter desired grid size between 5 - 100:", "5");
+          if (size >= 5 && size <= 100) {
+            return size;
+          } else {
+            continue;
+          }
+        }
+      }
+
       function createGrid(gridSize) {
         for (let i = 0; i < gridSize; i++) {
           const row = document.createElement("div");
