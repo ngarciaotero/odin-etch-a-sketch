@@ -39,6 +39,12 @@
         }
       }
 
+      function removeGrid() {
+        while (grid.firstChild) {
+          grid.removeChild(grid.firstChild);
+        }
+      }
+
       const cells = document.querySelectorAll(".cell");
       cells.forEach(function (cell) {
         cell.addEventListener("mouseover", function () {
