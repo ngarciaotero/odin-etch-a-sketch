@@ -34,26 +34,16 @@
             cell.classList.add("cell");
             row.appendChild(cell);
           }
-
           grid.appendChild(row);
         }
-      }
-
-      function removeGrid() {
-        while (grid.firstChild) {
-          grid.removeChild(grid.firstChild);
-        }
-      }
-
-      const cells = document.querySelectorAll(".cell");
-      cells.forEach(function (cell) {
-        cell.addEventListener("mouseover", function () {
-          if (!cell.classList.contains("cell-bkg-color")) {
-            cell.classList.add("cell-bkg-color");
-          }
-          //   cell.classList.toggle("cell-bkg-color");
+        const cells = document.querySelectorAll(".cell");
+        cells.forEach(function (cell) {
+          cell.addEventListener("mouseover", function () {
+            if (!cell.classList.contains("cell-bkg-color")) {
+              cell.classList.add("cell-bkg-color");
+            }
+          });
         });
-      });
     </script>
   </body>
 </html>
