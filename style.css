@@ -13,3 +13,7 @@
   padding: 20px;
   margin: 1px;
 }
+
+.cell-bkg-color {
+  background-color: rgba(0, 115, 255, 0.485);
+}

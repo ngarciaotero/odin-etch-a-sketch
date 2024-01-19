@@ -27,6 +27,16 @@
           grid.appendChild(row);
         }
       }
+
+      const cells = document.querySelectorAll(".cell");
+      cells.forEach(function (cell) {
+        cell.addEventListener("mouseover", function () {
+          if (!cell.classList.contains("cell-bkg-color")) {
+            cell.classList.add("cell-bkg-color");
+          }
+          //   cell.classList.toggle("cell-bkg-color");
+        });
+      });
     </script>
   </body>
 </html>
